@@ -2,7 +2,7 @@
   "name": "catch-lib-parser-core",
   "description": "A library containing core TypeScript parser code for the datr-tech/catch-api",
   "version": "0.1.0",
-  "main": "./dist/catch-lib-parser-core.cjs",
+  "main": "./dist/index.mjs",
   "type": "module",
   "engines": {
     "node": ">=20.0.0",
@@ -11,15 +11,11 @@
   "scripts": {
     "clean": "npx rimraf coverage/* dist/*",
     "lint": "npx eslint --config ./eslint.config.mjs --fix",
-    "format:base": "npx prettier --config ./.prettierrc './src/**/*.ts' './test/**/*.ts'",
-    "format:check": "npm run format:base -- --check",
-    "format:write": "npm run format:base -- --write",
-    "format": "npm run format:write",
+    "format": "npx prettier --config ./.prettierrc './src/**/*.ts' './test/**/*.ts' --write",
     "build": "npx webpack --mode production",
-    "test:base": "npx jest",
-    "test:unit": "npm run test:base -- ./test/unit",
-    "test:unit:cov": "npm run test:unit -- --coverage",
-    "test": "npm run test:unit:cov",
+    "test:unit": "npx jest ./test/unit --coverage",
+    "test:integration": "npx jest ./test/integration",
+    "test": "npm run test:unit",
     "prepare": "husky",
     "pre-push": "npm run lint"
   },

@@ -20,12 +20,14 @@ export default {
 		modules: ['node_modules'],
 		alias: {
 			'@app': path.resolve(__dirname, 'src/'),
-			'@appTest': path.resolve(__dirname, 'test/'),
+			'@dist': path.resolve(__dirname, 'dist/'),
+			'@test': path.resolve(__dirname, 'test/'),
 		},
 	},
 	target: 'node',
 	output: {
-		filename: 'catch-lib-parser-core.cjs',
+		filename: 'index.mjs',
+		libraryTarget: 'umd',
 		path: path.resolve(__dirname, 'dist'),
 	},
 };
