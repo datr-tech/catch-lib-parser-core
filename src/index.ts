@@ -1,5 +1,2 @@
-const helloWorld = () => {
-    console.log("Hello, world");
-}
-
-helloWorld();
+export { parserBuilderCore } from './core/builders/parserBuilders';
+export { IParserBuilder } from './interfaces/core/builders/parserBuilders';
