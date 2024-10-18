@@ -1,9 +1,9 @@
 import { ParserTypeEnum } from '@app/config/enums';
 import { IElementName } from '@app/interfaces/core/builders/parserBuilders/elements';
-import { IParse } from '@app/interfaces/core/builders/parserBuilders/parse';
+import { IParseHandler } from '@app/interfaces/core/builders/parserBuilders/parseHandlers';
 
-export interface IParserBuilderOutput {
-	parse: IParse;
+export interface IParserBuilderCoreInput {
 	elName: IElementName;
+	parseHandler: IParseHandler;
 	parserType?: ParserTypeEnum;
 }

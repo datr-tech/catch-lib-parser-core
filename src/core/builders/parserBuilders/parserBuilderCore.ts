@@ -1,9 +1,9 @@
 import { IElementChild } from '@app/interfaces/core/builders/parserBuilders/elements';
 import { IParse } from '@app/interfaces/core/builders/parserBuilders/parse';
-import { IParserBuilder } from '@app/interfaces/core/builders/parserBuilders';
+import { IParserBuilderCore } from '@app/interfaces/core/builders/parserBuilders';
 import { assertNonEmptyStr } from '@app/core/assertions';
 
-export const parserBuilderCore: IParserBuilder = ({
+export const parserBuilderCore: IParserBuilderCore = ({
 	elName,
 	parseHandler,
 	parserType,
