@@ -12,30 +12,30 @@ const __dirname = path.dirname(__filename);
 const gitignorePath = path.resolve(__dirname, '.gitignore');
 
 const compat = new FlatCompat({
-  baseDirectory: __dirname,
-  recommendedConfig: js.configs.recommended,
-  allConfig: js.configs.all,
+	baseDirectory: __dirname,
+	recommendedConfig: js.configs.recommended,
+	allConfig: js.configs.all,
 });
 
 export default [
-  includeIgnoreFile(gitignorePath),
-  ...compat.extends(
-    'eslint:recommended',
-    'plugin:@typescript-eslint/eslint-recommended',
-    'plugin:@typescript-eslint/recommended',
-    'prettier',
-  ),
-  {
-    plugins: {
-      '@typescript-eslint': typescriptEslint,
-      prettier,
-    },
-    languageOptions: {
-      parser: tsParser,
-    },
-    rules: {
-      'no-console': 1,
-      'prettier/prettier': 2,
-    },
-  },
+	includeIgnoreFile(gitignorePath),
+	...compat.extends(
+		'eslint:recommended',
+		'plugin:@typescript-eslint/eslint-recommended',
+		'plugin:@typescript-eslint/recommended',
+		'prettier',
+	),
+	{
+		plugins: {
+			'@typescript-eslint': typescriptEslint,
+			prettier,
+		},
+		languageOptions: {
+			parser: tsParser,
+		},
+		rules: {
+			'no-console': 1,
+			'prettier/prettier': 2,
+		},
+	},
 ];

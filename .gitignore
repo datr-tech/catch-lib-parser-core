@@ -1,6 +1,4 @@
 .idea
-docs
-analysis
 coverage
 dist
 node_modules
