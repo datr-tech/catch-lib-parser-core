@@ -1,6 +1,22 @@
 {
   "name": "catch-lib-parser-core",
-  "description": "A library containing core TypeScript parser code for the datr-tech/catch-api",
+  "description": "Core TypeScript parser code for the datr-tech/catch-api",
+  "author": "J.A.Strachan <j.alderson.strachan@datr.tech>",
+  "homepage": "https://github.com/datr-tech/catch-lib-parser-core/",
+  "keywords": [
+    "datr-tech",
+    "catch-api",
+    "parserBuilder",
+    "TypeScript"
+  ],
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/datr-tech/catch-lib-parser-core.git"
+  },
+  "bugs": {
+    "url": "https://github.com/datr-tech/catch-lib-parser-core/issues"
+  },
+  "license": "LGPL-3.0-or-later",
   "version": "0.1.0",
   "main": "./dist/index.mjs",
   "type": "module",

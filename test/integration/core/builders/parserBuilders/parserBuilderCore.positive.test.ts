@@ -1,6 +1,4 @@
-import { parserBuilderCore } from '@dist/index';
-import { IParseHandler } from '@app/interfaces/core/builders/parserBuilders/parseHandlers';
-import { IElementParent } from '@app/interfaces/core/builders/parserBuilders/elements';
+import { parserBuilderCore, IElementParent, IParseHandler } from '@dist/index';
 import { loadPageHelper } from '@test/helpers';
 
 const path = 'core/builders/parserBuilders/parserBuilderCore.positive.html';
